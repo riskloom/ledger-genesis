@@ -117,8 +117,14 @@ It is retrospective and the README says so. It does not evidence:
 
 Those rest on RiskLoom-controlled timestamps, S3 Object Lock and the ledger's
 internal hash chain. All are real controls and all are operated by the party
-making the claim. A future window committed to an external log *before* it opens
-would be Class B in a way these two windows can never retroactively become.
+making the claim. Windows 1 and 2 can never retroactively become anything else.
+
+**Window 3 is the exception, and it is not retrospective.** Its boundary and its
+pinned methodology are in `WINDOW_3_DECLARATION.md`, committed to the public
+transparency log before the window opened. Its ordering is checkable against a
+log RiskLoom does not operate. Window 3 has not been run and no outcome has been
+observed; when it is reported, the ordering claim will stand or fall on that log
+entry rather than on anything RiskLoom timestamps.
 
 ## 5. A known weakness in the archive itself, disclosed
 

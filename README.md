@@ -41,11 +41,53 @@ of bytes existed at the moment of the log entry, and that nobody — including
 RiskLoom — has altered them since. It proves nothing about when the underlying
 evaluation was performed.
 
+## Window 3 — the first prospectively anchored window
+
+Windows 1 and 2 are Class A, and the anchor over this package is retrospective
+(next section). **Window 3 is different, and it is the reason this repository
+exists.**
+
+`WINDOW_3_DECLARATION.md` fixes a seven-day boundary —
+**2026-09-20T00:00:00Z to 2026-09-27T00:00:00Z** — and pins by SHA-256 the exact
+protocol, amendment, calibration set, pipeline digests and evaluation scripts
+that Window 3 commits to. It was written, committed to this repository, and
+recorded in the public Sigstore transparency log **before that boundary opened**.
+
+That is the distinction:
+
+- Windows 1 and 2 — computed, then archived, then anchored. The evidence that
+  nothing was changed after seeing the market rests on RiskLoom-controlled
+  timestamps and S3 Object Lock. **Class A.**
+- Window 3 — declared and externally witnessed first, market observed
+  afterwards. The evidence that nothing was changed after seeing the market
+  rests on an append-only log RiskLoom does not operate and cannot backdate.
+  **Externally committed before observation.**
+
+Window 3 has **not** been run. No outcome has been computed, inspected or
+observed. Only the boundary and the methodology are fixed.
+
+Check the ordering yourself. Compare the log entry's `integratedTime` against
+the declared start:
+
+```sh
+sha256sum WINDOW_3_DECLARATION.md   # must be the file the root commits to
+rekor-cli search --sha $(sha256sum SHA256SUMS | cut -d' ' -f1)
+rekor-cli get --uuid <uuid> --format json | jq -r '.IntegratedTime | todate'
+# compare against the declared start: 2026-09-20T00:00:00Z
+```
+
+If that timestamp is later than the declared start, the prospective claim is
+false and you should say so. It is not, and the log is what settles it, not us.
+
 ## The anchor is retrospective
 
-The transparency-log entry over this package is a **retrospective anchor**. It
-establishes that the package existed on the date of the entry. It does **not**
-establish that the results predated observation.
+This section is about **Windows 1 and 2 only**. For Window 3, see the section
+above.
+
+As evidence for the Windows 1 and 2 *results*, the transparency-log entry over
+this package is a **retrospective anchor**. It establishes that the package
+existed on the date of the entry. It does **not** establish that those results
+predated observation.
 
 Window 1 was computed on **2026-09-07**. Window 2 was computed on
 **2026-09-18**. The anchor was created after both. Anyone assessing this
@@ -241,6 +283,7 @@ package.
 
 | File | What it is |
 |---|---|
+| `WINDOW_3_DECLARATION.md` | the Window 3 boundary and pinned methodology, committed before the window opens |
 | `CLASS_B_SPECIFICATION.md` | the frozen commitment and anchoring design |
 | `PROVENANCE.md` | every published file mapped to its archived source and digest |
 | `LIMITATIONS.md` | what is and is not independently checkable |

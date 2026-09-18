@@ -1,7 +1,8 @@
 # Provenance — every published file traced to its archived source
 
 This table covers everything under `package/`, which is the copied evidence.
-The repository's own files — `README.md`, `LIMITATIONS.md`,
+The repository's own files — `README.md`, `WINDOW_3_DECLARATION.md`,
+`LIMITATIONS.md`,
 `CLASS_B_SPECIFICATION.md`, `PROVENANCE.md`, `verify.sh`, `reproduce.sh`,
 `sha256sums.sh` and the workflow — were written for this package and have no
 archived source. They are covered by `SHA256SUMS` and therefore by the root.
