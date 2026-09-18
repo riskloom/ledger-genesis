@@ -1,0 +1,10 @@
+bodies to read: 169 slots x 69 symbols = 11661
+  2000/11661  12s
+  4000/11661  17s
+  6000/11661  19s
+  8000/11661  22s
+  10000/11661  26s
+read 11661 bodies in 28s, missing bodies: 0
+bars per symbol: min 10136 max 10136
+bar span: 2026-08-30T13:55:00Z -> 2026-09-06T14:50:00Z
+symbols with any 1-min gap: 0 ; total gap points: 0

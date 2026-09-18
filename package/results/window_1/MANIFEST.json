@@ -1,0 +1,159 @@
+{
+  "archive_created_utc": "2026-09-07T16:28:47Z",
+  "artefact": "Prospective Evaluation \u2014 Window 1 \u2014 completed evidence archive",
+  "artefacts": [
+    {
+      "path": "disclosure/results/window_1/report/EVALUATION_REPORT.md",
+      "sha256": "2b87d8f305f30d9543d77c802504870df8c441edd62e1431af8702f881cf39c5",
+      "size_bytes": 5485
+    },
+    {
+      "path": "disclosure/results/window_1/report/run_log_01_02.txt",
+      "sha256": "7043b320f614cf3b59442fd3a03791ff8e2518a0ae5d1925745e5dbc1c48d17b",
+      "size_bytes": 930
+    },
+    {
+      "path": "disclosure/results/window_1/report/run_log_03_prices.txt",
+      "sha256": "6b6d201938a003e0217cb14962c17058fc37fb6c0d83827ae460eb99dbdca8c1",
+      "size_bytes": 326
+    },
+    {
+      "path": "disclosure/results/window_1/report/run_log_04_grid.txt",
+      "sha256": "370143d42d5d7ba28b3f562d8ade825a6fe0a71c1712a1196dace3e21a4cbed3",
+      "size_bytes": 3885
+    },
+    {
+      "path": "disclosure/results/window_1/report/run_log_05_maxstate.txt",
+      "sha256": "98db813374896b951e7c3c5806ca110969b1a1e9cb322944d20a6c5f6024669c",
+      "size_bytes": 2029
+    },
+    {
+      "path": "disclosure/results/window_1/report/run_log_06_per_symbol.txt",
+      "sha256": "d45a168b3df95e9d5f456e7a33ca3541f1e9e0ea4c7b977f0a73b6b1fcd09909",
+      "size_bytes": 5607
+    },
+    {
+      "path": "disclosure/results/window_1/data/bars.json",
+      "sha256": "c5f4c26d7adc29e986ce0e140a63c2200b2eae3166050372fd5cd06cb33d5e55",
+      "size_bytes": 30662611
+    },
+    {
+      "path": "disclosure/results/window_1/data/baseline.json",
+      "sha256": "33d105b24d25f14e4d680aa9271ef632326be7d0b2053e776269f3e5f27ae6bd",
+      "size_bytes": 140952
+    },
+    {
+      "path": "disclosure/results/window_1/data/episodes.json",
+      "sha256": "c9d23216ab4a4f9dfdbbee900c8a4718cea3b1cbd0f9568e69893c7f50ae1d6e",
+      "size_bytes": 65896
+    },
+    {
+      "path": "disclosure/results/window_1/data/layer1.json",
+      "sha256": "3f4f7cd748741b37149195646ce2e42990aad249fd3e4d224c5d78235b2fc0be",
+      "size_bytes": 6839
+    },
+    {
+      "path": "disclosure/results/window_1/data/layer2.json",
+      "sha256": "438809cbd0c7d58ddd50c73a513acfdd1dd50df15cce3a920d0ceb4ae9e93e34",
+      "size_bytes": 19893
+    },
+    {
+      "path": "disclosure/results/window_1/data/ledger_window.json",
+      "sha256": "78a295190565cd30a27109165c44788cd72dcce7b84d4a3caf04ae890678e985",
+      "size_bytes": 3093002
+    },
+    {
+      "path": "disclosure/results/window_1/data/universe.json",
+      "sha256": "be2a6c67c62f13b7c4a946bf829e79f30c5c6e63e12fbd719b2ce98aed9f3eee",
+      "size_bytes": 803
+    },
+    {
+      "path": "disclosure/results/window_1/code/01_load_ledger.py",
+      "sha256": "ba05f22a29e458446d60933759c2d4394815214945f78438f901f84dd7c36318",
+      "size_bytes": 1369
+    },
+    {
+      "path": "disclosure/results/window_1/code/02_layer1_and_anchors.py",
+      "sha256": "b6fdf2904d4e6a3211e01f9cdf0b3b65668b79d28a37274621c66e6142bc5d33",
+      "size_bytes": 3843
+    },
+    {
+      "path": "disclosure/results/window_1/code/03_build_price_series.py",
+      "sha256": "57079f22c99b139e6505142aca01b31518efafbf86328d453462550aafab99a9",
+      "size_bytes": 2169
+    },
+    {
+      "path": "disclosure/results/window_1/code/04_layer2_grid.py",
+      "sha256": "bce2aa2782e7c353f010a5bc1af0eeedbc78d56098fc91b85628148745204f90",
+      "size_bytes": 3274
+    },
+    {
+      "path": "disclosure/results/window_1/code/05_maxstate_split.py",
+      "sha256": "67edd89bb5853d94ab85d94cb3221be90c4c799c064fbba088a5f88fe8f38771",
+      "size_bytes": 692
+    },
+    {
+      "path": "disclosure/results/window_1/code/06_per_symbol.py",
+      "sha256": "655e4adfe4a7be1adbd1729335b528d8c522529039f557115c43f361bcef9f42",
+      "size_bytes": 2377
+    },
+    {
+      "path": "disclosure/results/window_1/code/INVOCATION.md",
+      "sha256": "dbcee8780c561aa61af7f0ea245a18aeff2be0c8efe6a0f4ba91bb28fe68f077",
+      "size_bytes": 2568
+    },
+    {
+      "path": "disclosure/results/window_1/WINDOW_2_DECLARATION.md",
+      "sha256": "39a9abcf41107d76ad6a30eec5d25a86d43a68fb6f8e0ada2b547c431d6dbb9e",
+      "size_bytes": 3117
+    }
+  ],
+  "code_provenance": "The six computation scripts executed as inline shell heredocs, not as files on disk. The files under code/ are verbatim transcriptions of those heredoc bodies, captured after the run. They were NOT re-executed before archiving, because rerunning was forbidden. See code/INVOCATION.md.",
+  "evaluation_run": {
+    "basis": "Output-file mtimes: first computed artefact (ledger_window.json) to last (layer2.json). Per-symbol and max-state tables are re-presentations of these artefacts and wrote no new data file.",
+    "end_utc": "2026-09-07T16:04:28Z",
+    "note": "Run start is after both governing documents were archived.",
+    "start_utc": "2026-09-07T16:02:37Z"
+  },
+  "evidence_window_evaluated": {
+    "end_exclusive": "2026-09-06T14:55:00Z",
+    "observations": 2016,
+    "price_bar_span": "2026-08-30T13:55:00Z .. 2026-09-06T14:50:00Z",
+    "price_bars_per_symbol": 10136,
+    "price_gaps": 0,
+    "start_inclusive": "2026-08-30T14:55:00Z",
+    "symbols": 69
+  },
+  "excluded_from_archive": "AWS session credentials and db.sh (contains a Secrets Manager ARN) are deliberately not archived.",
+  "governing_documents": {
+    "amendment_1": {
+      "archived_utc": "2026-09-07T15:57:56Z",
+      "dated": "2026-09-07",
+      "path": "disclosure/protocol/AMENDMENT_1.md",
+      "sha256": "f6a8d80c7da1cf1687eae39b7bdd40d8cd7e23197e3982d4643f9c668753b60c"
+    },
+    "protocol_v1_0": {
+      "archived_utc": "2026-09-07T15:33:14Z",
+      "freeze_time_utc": "2026-09-07T15:19:24Z",
+      "path": "disclosure/protocol/RiskLoom_Prospective_Evaluation_Protocol_v1.0.pdf",
+      "sha256": "9ebf02e41ea4b45f707cf029be68e41f26aba9ec578c4ec52a15bed71d168127"
+    }
+  },
+  "ordering_attestation": {
+    "ambiguities_resolved_before_opening": "Both implementation ambiguities (C0 definition; forward-evidence boundary) were identified and reported to the owner BEFORE any outcome was inspected or calculated, and resolved by owner instruction recorded in Amendment 1. No outcome data informed either resolution.",
+    "evidence": "Protocol archived 2026-09-07T15:33:14Z; Amendment 1 archived 2026-09-07T15:57:56Z; first outcome artefact computed 2026-09-07T16:02:37Z. Both precede the run by construction and by recorded timestamp.",
+    "protocol_and_amendment_archived_before_any_outcome_calculation": true
+  },
+  "raw_prefix_untouched": "raw/ was not modified. Audited invariant preserved: 2257 slot prefixes, exactly 139 objects each.",
+  "tuning_attestation": {
+    "nothing_tuned_or_modified_after_results_visible": true,
+    "statement": "No threshold, horizon, exclusion, episode rule, baseline construction, majors classification or metric was added, removed or altered after any result was visible. The evaluation was computed once. No cell was selected as headline. No statistical test beyond the four predeclared figures was introduced. Layer 1 and Layer 2 were not combined."
+  },
+  "window_2": {
+    "declared": true,
+    "end_exclusive": "2026-09-15T00:00:00Z",
+    "note": "Boundary fixed while blind. Declaration archived in this directory.",
+    "run": false,
+    "start_inclusive": "2026-09-08T00:00:00Z"
+  }
+}

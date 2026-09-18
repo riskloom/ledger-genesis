@@ -1,0 +1,109 @@
+# Class B, section 2 and 3.
+#
+# Signs the commitment manifest SHA256SUMS with cosign keyless signing, using
+# this repository's GitHub Actions workload identity, and records the signature
+# in the public Sigstore transparency log.
+#
+# The certificate identity verifiers pin is
+#   https://github.com/riskloom/ledger-genesis/.github/workflows/anchor-sha256sums.yml@refs/heads/main
+# with OIDC issuer
+#   https://token.actions.githubusercontent.com
+#
+# This workflow file is itself inside the committed package, so its bytes are
+# covered by the root it anchors.
+
+name: anchor-sha256sums
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['SHA256SUMS']
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  anchor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Recompute the canonical commitment manifest and confirm it matches
+        run: |
+          set -eu
+          ./sha256sums.sh > /tmp/regenerated
+          if ! cmp -s /tmp/regenerated SHA256SUMS; then
+            echo "FAIL: SHA256SUMS is not the canonical construction over this tree"
+            diff /tmp/regenerated SHA256SUMS | head -40
+            exit 1
+          fi
+          ROOT=$(sha256sum SHA256SUMS | cut -d' ' -f1)
+          echo "ROOT=$ROOT" >> "$GITHUB_ENV"
+          echo "package root: $ROOT"
+          echo "files in package: $(wc -l < SHA256SUMS | tr -d ' ') LF separators"
+
+      - uses: sigstore/cosign-installer@v3
+
+      - name: Sign SHA256SUMS keyless and record it in the public transparency log
+        run: |
+          set -eu
+          cosign version
+          cosign sign-blob --yes --bundle cosign.bundle SHA256SUMS > cosign.sig
+          echo "--- bundle written ---"
+          ls -l cosign.bundle cosign.sig
+
+      - name: Extract and print the transparency-log entry
+        run: |
+          set -eu
+          python3 - <<'PY' | tee TLOG_ENTRY.txt
+          import json
+          b=json.load(open("cosign.bundle"))
+          print("mediaType:", b.get("mediaType"))
+          vm=b.get("verificationMaterial",{})
+          for e in vm.get("tlogEntries",[]):
+              print("logIndex:", e.get("logIndex"))
+              print("logId:", json.dumps(e.get("logId")))
+              print("integratedTime:", e.get("integratedTime"))
+              print("kind:", (e.get("kindVersion") or {}).get("kind"),
+                    (e.get("kindVersion") or {}).get("version"))
+          PY
+
+      - name: Verify the freshly created entry against the pinned identity
+        run: |
+          set -eu
+          cosign verify-blob \
+            --bundle cosign.bundle \
+            --certificate-identity "https://github.com/${{ github.repository }}/.github/workflows/anchor-sha256sums.yml@refs/heads/main" \
+            --certificate-oidc-issuer "https://token.actions.githubusercontent.com" \
+            SHA256SUMS
+          echo "self-verification OK"
+
+      - name: Publish the signature material as a release asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -eu
+          TAG="anchor-${ROOT:0:16}"
+          NOTES="Class B retrospective anchor over the Windows 1 and 2 verification package.
+
+          Package root (SHA-256 of SHA256SUMS): \`${ROOT}\`
+
+          This proves the package existed at the time of this transparency-log entry.
+          It does NOT prove the results predated observation. Windows 1 and 2 were
+          computed on 7 and 18 September 2026 respectively.
+
+          $(cat TLOG_ENTRY.txt)"
+          gh release create "$TAG" --title "$TAG" --notes "$NOTES" \
+            cosign.bundle cosign.sig SHA256SUMS TLOG_ENTRY.txt \
+          || gh release upload "$TAG" cosign.bundle cosign.sig SHA256SUMS TLOG_ENTRY.txt --clobber
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anchor
+          path: |
+            cosign.bundle
+            cosign.sig
+            TLOG_ENTRY.txt
+            SHA256SUMS

@@ -1,0 +1,75 @@
+PER-SYMBOL DETAIL — reference cell 2% / 60 min (visible, not used for claims)
+symbol           maj  eps  w_n w_hit   warn%  anch b_hit   norm%  ELEV  CASC
+ARBUSDT                39   39    13    33.3    42    10    24.4   123    10
+PUMPUSDT               37   37    21    56.8    42    13    31.7   109     9
+UNIUSDT                36   36     7    19.4    42     6    14.6   114     8
+AEROUSDT               35   35    14    40.0    42    10    25.0   118     6
+ATOMUSDT               30   30    14    46.7    42     7    17.1    89     0
+DOTUSDT                21   21     5    23.8    42     3     7.3    59     5
+LITUSDT                21   20     7    35.0    42    13    31.7    68     0
+ENAUSDT                20   20     5    25.0    42     7    17.1    59     3
+XRPUSDT            Y   20   19     4    21.1    42     2     4.9    66     0
+APTUSDT                17   17     6    35.3    42     7    16.7    53     0
+BRUSDT                 17   17    17   100.0    42    28    66.7    75     0
+1000PEPEUSDT           16   16     4    25.0    42     5    12.2    38     3
+TACUSDT                16   16     6    37.5    42    18    42.9    59     0
+FILUSDT                15   15    11    73.3    42    11    26.2    43     0
+SENTUSDT               15   14     7    50.0    42     8    19.5    50     0
+ZECUSDT                15   15     9    60.0    42    10    23.8    61     0
+BCHUSDT                13   12     2    16.7    42     2     4.8    38     0
+PENDLEUSDT             13   13     1     7.7    42     7    16.7    37     0
+TIAUSDT                13   13     3    23.1    42     3     7.1    33     0
+LINKUSDT           Y   12   12     0     0.0    42     2     4.8    34     0
+AAVEUSDT               11   11     2    18.2    42     2     4.9    38     0
+ADAUSDT            Y   11   11     2    18.2    42     3     7.1    29     0
+INJUSDT                11   11     5    45.5    42     5    11.9    30     0
+LTCUSDT                11   11     0     0.0    42     1     2.4    36     0
+SUIUSDT                11   11     1     9.1    42     3     7.3    32     0
+XPLUSDT                11   11     5    45.5    42     9    21.4    39     0
+ETHUSDT            Y   10   10     1    10.0    42     3     7.3    25     9
+LDOUSDT                10   10     1    10.0    42     2     4.8    37     0
+OPUSDT                 10   10     3    30.0    42     3     7.1    31     3
+PENGUUSDT              10   10     0     0.0    42     4     9.8    33     0
+TRUMPUSDT              10   10     5    50.0    42     5    11.9    37     0
+BNBUSDT            Y    9    9     0     0.0    42     0     0.0    27     5
+BTCUSDT            Y    9    9     0     0.0    42     0     0.0    32     0
+SEIUSDT                 9    9     1    11.1    42     3     7.3    32     0
+SOLUSDT            Y    9    9     1    11.1    42     2     4.9    31     0
+XAUUSDT                 9    9     0     0.0    42     0     0.0    33     0
+DOGEUSDT           Y    8    8     1    12.5    42     2     4.8    22     3
+EVAAUSDT                8    8     5    62.5    42    17    40.5    24     0
+HYPEUSDT                8    8     1    12.5    42     3     7.3    24     0
+NEARUSDT                8    8     5    62.5    42     9    22.0    23     0
+AVAXUSDT                7    7     0     0.0    42     3     7.1    20     0
+FARTCOINUSDT            7    7     5    71.4    42     7    17.1    29     0
+XMRUSDT                 7    7     0     0.0    42     2     4.8    19     0
+SQDUSDT                 6    6     1    16.7    42     2     4.8    18     0
+TRXUSDT                 6    6     0     0.0    42     0     0.0    18     0
+FETUSDT                 5    5     1    20.0    42     4     9.5    14     0
+SPXUSDT                 5    4     2    50.0    42     5    11.9    17     0
+XAGUSDT                 5    5     1    20.0    42     2     4.8    14     3
+JTOUSDT                 4    4     1    25.0    42     8    19.0    10     0
+MAGMAUSDT               4    4     4   100.0    42    22    52.4     7     1
+TRIAUSDT                4    4     3    75.0    42    16    38.1     9     3
+BEATUSDT                3    3     3   100.0    42    17    40.5     4     3
+ICPUSDT                 3    3     0     0.0    42     8    19.0     9     0
+IDUSDT                  3    3     2    66.7    42     3     7.1     9     0
+WLDUSDT                 3    3     0     0.0    42     9    21.4     7     0
+TAOUSDT                 2    2     0     0.0    42     5    11.9     6     0
+WIFUSDT                 2    2     0     0.0    42     4     9.5     4     0
+ALLOUSDT                1    1     1   100.0    42     6    14.3     3     0
+BIOUSDT                 1    1     1   100.0    42     5    11.9     3     0
+BLESSUSDT               1    1     0     0.0    42     9    21.4     3     0
+CLOUSDT                 1    1     1   100.0    42     9    21.4     3     0
+ESPORTSUSDT             1    1     1   100.0    42     9    21.4     3     0
+PORTALUSDT              1    1     1   100.0    42    11    26.2     3     0
+RIFUSDT                 1    1     0     0.0    42     0     0.0     3     0
+SKYAIUSDT               1    1     1   100.0    42     7    16.7     3     0
+VELVETUSDT              1    1     1   100.0    42    19    45.2     3     0
+XLMUSDT                 1    1     0     0.0    42     3     7.1     1     0
+STGUSDT                 0    0     0     nan    42     1     2.4     0     0
+TONUSDT                 0    0     0     nan    42     0     0.0     0     0
+
+episodes concentration: top 5 symbols hold 25.3 % of all episodes
+symbols with 0 episodes: 2
+symbols with >=1 CASCADE_PRESSURE slot: 15

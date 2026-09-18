@@ -1,0 +1,4 @@
+in-window rows: 2014
+first: 2026-09-08T00:00:00Z  last: 2026-09-14T23:55:00Z
+symbols per row: 69
+universe consistent across all rows: True

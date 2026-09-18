@@ -1,0 +1,411 @@
+{
+ "total_rows": 2016,
+ "symbol_slot_observations": 139104,
+ "bands": {
+  "NORMAL": {
+   "slots": 136690,
+   "share_pct": 98.265,
+   "runs": 801,
+   "mean_min": 853.2,
+   "median_min": 255
+  },
+  "ELEVATED": {
+   "slots": 2328,
+   "share_pct": 1.674,
+   "runs": 738,
+   "mean_min": 15.8,
+   "median_min": 15.0
+  },
+  "CASCADE_PRESSURE": {
+   "slots": 86,
+   "share_pct": 0.062,
+   "runs": 35,
+   "mean_min": 12.3,
+   "median_min": 15
+  }
+ },
+ "market_states": {
+  "QUIET": {
+   "slots": 1014,
+   "share_pct": 50.298,
+   "runs": 186,
+   "mean_min": 27.3,
+   "median_min": 20.0
+  },
+  "BUILDING": {
+   "slots": 624,
+   "share_pct": 30.952,
+   "runs": 244,
+   "mean_min": 12.8,
+   "median_min": 10.0
+  },
+  "ELEVATED": {
+   "slots": 249,
+   "share_pct": 12.351,
+   "runs": 118,
+   "mean_min": 10.6,
+   "median_min": 10.0
+  },
+  "STRESSED": {
+   "slots": 129,
+   "share_pct": 6.399,
+   "runs": 48,
+   "mean_min": 13.4,
+   "median_min": 15.0
+  },
+  "UNKNOWN": {
+   "slots": 0,
+   "share_pct": 0.0,
+   "runs": 0,
+   "mean_min": null,
+   "median_min": null
+  }
+ },
+ "per_symbol": {
+  "1000PEPEUSDT": {
+   "NORMAL": 1981,
+   "ELEVATED": 29,
+   "CASCADE_PRESSURE": 6
+  },
+  "AAVEUSDT": {
+   "NORMAL": 1983,
+   "ELEVATED": 33,
+   "CASCADE_PRESSURE": 0
+  },
+  "ADAUSDT": {
+   "NORMAL": 1998,
+   "ELEVATED": 18,
+   "CASCADE_PRESSURE": 0
+  },
+  "AEROUSDT": {
+   "NORMAL": 1981,
+   "ELEVATED": 32,
+   "CASCADE_PRESSURE": 3
+  },
+  "ALLOUSDT": {
+   "NORMAL": 2016,
+   "ELEVATED": 0,
+   "CASCADE_PRESSURE": 0
+  },
+  "APTUSDT": {
+   "NORMAL": 1985,
+   "ELEVATED": 31,
+   "CASCADE_PRESSURE": 0
+  },
+  "ARBUSDT": {
+   "NORMAL": 1741,
+   "ELEVATED": 259,
+   "CASCADE_PRESSURE": 16
+  },
+  "ATOMUSDT": {
+   "NORMAL": 1997,
+   "ELEVATED": 19,
+   "CASCADE_PRESSURE": 0
+  },
+  "AVAXUSDT": {
+   "NORMAL": 1995,
+   "ELEVATED": 18,
+   "CASCADE_PRESSURE": 3
+  },
+  "BCHUSDT": {
+   "NORMAL": 1984,
+   "ELEVATED": 32,
+   "CASCADE_PRESSURE": 0
+  },
+  "BEATUSDT": {
+   "NORMAL": 2013,
+   "ELEVATED": 3,
+   "CASCADE_PRESSURE": 0
+  },
+  "BIOUSDT": {
+   "NORMAL": 2013,
+   "ELEVATED": 3,
+   "CASCADE_PRESSURE": 0
+  },
+  "BLESSUSDT": {
+   "NORMAL": 2001,
+   "ELEVATED": 15,
+   "CASCADE_PRESSURE": 0
+  },
+  "BNBUSDT": {
+   "NORMAL": 1947,
+   "ELEVATED": 69,
+   "CASCADE_PRESSURE": 0
+  },
+  "BRUSDT": {
+   "NORMAL": 1991,
+   "ELEVATED": 25,
+   "CASCADE_PRESSURE": 0
+  },
+  "BTCUSDT": {
+   "NORMAL": 1986,
+   "ELEVATED": 28,
+   "CASCADE_PRESSURE": 2
+  },
+  "CLOUSDT": {
+   "NORMAL": 1993,
+   "ELEVATED": 20,
+   "CASCADE_PRESSURE": 3
+  },
+  "DOGEUSDT": {
+   "NORMAL": 1985,
+   "ELEVATED": 31,
+   "CASCADE_PRESSURE": 0
+  },
+  "DOTUSDT": {
+   "NORMAL": 1996,
+   "ELEVATED": 20,
+   "CASCADE_PRESSURE": 0
+  },
+  "ENAUSDT": {
+   "NORMAL": 1954,
+   "ELEVATED": 56,
+   "CASCADE_PRESSURE": 6
+  },
+  "ESPORTSUSDT": {
+   "NORMAL": 2013,
+   "ELEVATED": 3,
+   "CASCADE_PRESSURE": 0
+  },
+  "ETHUSDT": {
+   "NORMAL": 1981,
+   "ELEVATED": 32,
+   "CASCADE_PRESSURE": 3
+  },
+  "EVAAUSDT": {
+   "NORMAL": 2007,
+   "ELEVATED": 9,
+   "CASCADE_PRESSURE": 0
+  },
+  "FARTCOINUSDT": {
+   "NORMAL": 1995,
+   "ELEVATED": 21,
+   "CASCADE_PRESSURE": 0
+  },
+  "FETUSDT": {
+   "NORMAL": 2004,
+   "ELEVATED": 12,
+   "CASCADE_PRESSURE": 0
+  },
+  "FILUSDT": {
+   "NORMAL": 1977,
+   "ELEVATED": 39,
+   "CASCADE_PRESSURE": 0
+  },
+  "HYPEUSDT": {
+   "NORMAL": 1997,
+   "ELEVATED": 19,
+   "CASCADE_PRESSURE": 0
+  },
+  "ICPUSDT": {
+   "NORMAL": 2004,
+   "ELEVATED": 12,
+   "CASCADE_PRESSURE": 0
+  },
+  "IDUSDT": {
+   "NORMAL": 2008,
+   "ELEVATED": 8,
+   "CASCADE_PRESSURE": 0
+  },
+  "INJUSDT": {
+   "NORMAL": 2004,
+   "ELEVATED": 12,
+   "CASCADE_PRESSURE": 0
+  },
+  "JTOUSDT": {
+   "NORMAL": 1997,
+   "ELEVATED": 19,
+   "CASCADE_PRESSURE": 0
+  },
+  "LDOUSDT": {
+   "NORMAL": 1991,
+   "ELEVATED": 25,
+   "CASCADE_PRESSURE": 0
+  },
+  "LINKUSDT": {
+   "NORMAL": 1983,
+   "ELEVATED": 33,
+   "CASCADE_PRESSURE": 0
+  },
+  "LITUSDT": {
+   "NORMAL": 1939,
+   "ELEVATED": 77,
+   "CASCADE_PRESSURE": 0
+  },
+  "LTCUSDT": {
+   "NORMAL": 1984,
+   "ELEVATED": 32,
+   "CASCADE_PRESSURE": 0
+  },
+  "MAGMAUSDT": {
+   "NORMAL": 1800,
+   "ELEVATED": 213,
+   "CASCADE_PRESSURE": 3
+  },
+  "NEARUSDT": {
+   "NORMAL": 1998,
+   "ELEVATED": 18,
+   "CASCADE_PRESSURE": 0
+  },
+  "OPUSDT": {
+   "NORMAL": 1989,
+   "ELEVATED": 24,
+   "CASCADE_PRESSURE": 3
+  },
+  "PENDLEUSDT": {
+   "NORMAL": 2000,
+   "ELEVATED": 16,
+   "CASCADE_PRESSURE": 0
+  },
+  "PENGUUSDT": {
+   "NORMAL": 1994,
+   "ELEVATED": 22,
+   "CASCADE_PRESSURE": 0
+  },
+  "PORTALUSDT": {
+   "NORMAL": 2006,
+   "ELEVATED": 10,
+   "CASCADE_PRESSURE": 0
+  },
+  "PUMPUSDT": {
+   "NORMAL": 1930,
+   "ELEVATED": 80,
+   "CASCADE_PRESSURE": 6
+  },
+  "RIFUSDT": {
+   "NORMAL": 2014,
+   "ELEVATED": 2,
+   "CASCADE_PRESSURE": 0
+  },
+  "SEIUSDT": {
+   "NORMAL": 2000,
+   "ELEVATED": 16,
+   "CASCADE_PRESSURE": 0
+  },
+  "SENTUSDT": {
+   "NORMAL": 2013,
+   "ELEVATED": 3,
+   "CASCADE_PRESSURE": 0
+  },
+  "SKYAIUSDT": {
+   "NORMAL": 2016,
+   "ELEVATED": 0,
+   "CASCADE_PRESSURE": 0
+  },
+  "SOLUSDT": {
+   "NORMAL": 1967,
+   "ELEVATED": 49,
+   "CASCADE_PRESSURE": 0
+  },
+  "SPXUSDT": {
+   "NORMAL": 1974,
+   "ELEVATED": 42,
+   "CASCADE_PRESSURE": 0
+  },
+  "SQDUSDT": {
+   "NORMAL": 1995,
+   "ELEVATED": 21,
+   "CASCADE_PRESSURE": 0
+  },
+  "STGUSDT": {
+   "NORMAL": 2016,
+   "ELEVATED": 0,
+   "CASCADE_PRESSURE": 0
+  },
+  "SUIUSDT": {
+   "NORMAL": 1993,
+   "ELEVATED": 23,
+   "CASCADE_PRESSURE": 0
+  },
+  "TACUSDT": {
+   "NORMAL": 1960,
+   "ELEVATED": 56,
+   "CASCADE_PRESSURE": 0
+  },
+  "TAOUSDT": {
+   "NORMAL": 2009,
+   "ELEVATED": 7,
+   "CASCADE_PRESSURE": 0
+  },
+  "TIAUSDT": {
+   "NORMAL": 1995,
+   "ELEVATED": 18,
+   "CASCADE_PRESSURE": 3
+  },
+  "TONUSDT": {
+   "NORMAL": 2016,
+   "ELEVATED": 0,
+   "CASCADE_PRESSURE": 0
+  },
+  "TRIAUSDT": {
+   "NORMAL": 1925,
+   "ELEVATED": 84,
+   "CASCADE_PRESSURE": 7
+  },
+  "TRUMPUSDT": {
+   "NORMAL": 1984,
+   "ELEVATED": 29,
+   "CASCADE_PRESSURE": 3
+  },
+  "TRXUSDT": {
+   "NORMAL": 1972,
+   "ELEVATED": 44,
+   "CASCADE_PRESSURE": 0
+  },
+  "UNIUSDT": {
+   "NORMAL": 1824,
+   "ELEVATED": 181,
+   "CASCADE_PRESSURE": 11
+  },
+  "VELVETUSDT": {
+   "NORMAL": 2008,
+   "ELEVATED": 8,
+   "CASCADE_PRESSURE": 0
+  },
+  "WIFUSDT": {
+   "NORMAL": 1999,
+   "ELEVATED": 17,
+   "CASCADE_PRESSURE": 0
+  },
+  "WLDUSDT": {
+   "NORMAL": 2007,
+   "ELEVATED": 9,
+   "CASCADE_PRESSURE": 0
+  },
+  "XAGUSDT": {
+   "NORMAL": 2003,
+   "ELEVATED": 13,
+   "CASCADE_PRESSURE": 0
+  },
+  "XAUUSDT": {
+   "NORMAL": 1968,
+   "ELEVATED": 48,
+   "CASCADE_PRESSURE": 0
+  },
+  "XLMUSDT": {
+   "NORMAL": 2009,
+   "ELEVATED": 7,
+   "CASCADE_PRESSURE": 0
+  },
+  "XMRUSDT": {
+   "NORMAL": 1948,
+   "ELEVATED": 65,
+   "CASCADE_PRESSURE": 3
+  },
+  "XPLUSDT": {
+   "NORMAL": 2004,
+   "ELEVATED": 12,
+   "CASCADE_PRESSURE": 0
+  },
+  "XRPUSDT": {
+   "NORMAL": 1969,
+   "ELEVATED": 44,
+   "CASCADE_PRESSURE": 3
+  },
+  "ZECUSDT": {
+   "NORMAL": 1961,
+   "ELEVATED": 53,
+   "CASCADE_PRESSURE": 2
+  }
+ }
+}

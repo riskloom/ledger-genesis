@@ -1,0 +1,14 @@
+=== LAYER 1 ===
+symbol-slot observations: 138966
+  NORMAL             slots= 136709 share= 98.376%  runs=  769 mean=888.9 median=340
+  ELEVATED           slots=   2183 share=  1.571%  runs=  696 mean=15.7 median=15.0
+  CASCADE_PRESSURE   slots=     74 share=  0.053%  runs=   31 mean=11.9 median=15
+market states (of 2016 rows):
+  QUIET      slots= 1195 share= 59.335%  runs= 159 mean=37.6 median=20
+  BUILDING   slots=  483 share= 23.982%  runs= 189 mean=12.8 median=15
+  ELEVATED   slots=  217 share= 10.775%  runs=  95 mean=11.4 median=10
+  STRESSED   slots=  119 share=  5.909%  runs=  36 mean=16.5 median=15.0
+  UNKNOWN    slots=    0 share=  0.000%  runs=   0 mean=None median=None
+
+warning episodes : 700  (ELEVATED-max: 669  CASCADE_PRESSURE-max: 31 )
+baseline anchors : 2898

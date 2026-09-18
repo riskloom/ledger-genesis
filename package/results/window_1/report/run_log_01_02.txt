@@ -1,0 +1,19 @@
+in-window rows: 2016
+first: 2026-08-30T14:55:00Z  last: 2026-09-06T14:50:00Z
+symbols per row: 69
+universe consistent across all rows: True
+
+=== LAYER 1 ===
+symbol-slot observations: 139104
+  NORMAL             slots= 136690 share= 98.265%  runs=  801 mean=853.2 median=255
+  ELEVATED           slots=   2328 share=  1.674%  runs=  738 mean=15.8 median=15.0
+  CASCADE_PRESSURE   slots=     86 share=  0.062%  runs=   35 mean=12.3 median=15
+market states (of 2016 rows):
+  QUIET      slots= 1014 share= 50.298%  runs= 186 mean=27.3 median=20.0
+  BUILDING   slots=  624 share= 30.952%  runs= 244 mean=12.8 median=10.0
+  ELEVATED   slots=  249 share= 12.351%  runs= 118 mean=10.6 median=10.0
+  STRESSED   slots=  129 share=  6.399%  runs=  48 mean=13.4 median=15.0
+  UNKNOWN    slots=    0 share=  0.000%  runs=   0 mean=None median=None
+
+warning episodes : 733  (ELEVATED-max: 700  CASCADE_PRESSURE-max: 33 )
+baseline anchors : 2898

@@ -1,0 +1,40 @@
+{
+  "archive_created_utc": "2026-09-07T15:36:36Z",
+  "archived_by": "soak completion audit session, owner-authorised write",
+  "artifacts": [
+    {
+      "description": "Prospective Evaluation Protocol v1.0",
+      "freeze_time_basis": "File write time, confirmed by the owner as the moment of finalisation and freeze.",
+      "freeze_time_utc": "2026-09-07T15:19:24Z",
+      "path": "disclosure/protocol/RiskLoom_Prospective_Evaluation_Protocol_v1.0.pdf",
+      "predates_outcome_opening": true,
+      "predates_outcome_opening_note": "Frozen 2026-09-07T15:19:24Z, before any sealed prospective outcome was opened. No outcome had been opened or calculated at the time of this archive.",
+      "sha256": "9ebf02e41ea4b45f707cf029be68e41f26aba9ec578c4ec52a15bed71d168127",
+      "sha256_expected": "9ebf02e41ea4b45f707cf029be68e41f26aba9ec578c4ec52a15bed71d168127",
+      "size_bytes": 12373
+    },
+    {
+      "description": "Per-symbol calibration set in force throughout the soak (69 symbols)",
+      "path": "disclosure/thresholds/thresholds.json",
+      "provenance_note": "Post-soak disclosure of the pre-soak threshold file. The threshold digest was prospectively committed during the soak; this file itself was not separately retained in the evidence store during the soak.",
+      "sha256": "abaf499d9089fd363dd6fdd6f5b1be59177dccb99520b16f9ed1913de83232d3",
+      "size_bytes": 12108,
+      "source": "Lambda rl-pipeline-observe, CodeSha256 8nEvzxdfaCvmzNiA8j+Gd/cACW4CtB5Uu4rgdfA5gHY=, LastModified 2026-08-30T14:48:22Z",
+      "thresholds_digest": "0568f24ceb798001ecffed6d9101c4c863d1e6c0f5718f1d5aedc70151cfb25d",
+      "thresholds_digest_verified": "Recomputed with production canonicalisation (pipeline.digests.thresholds_digest) from the frozen Lambda bundle; equals the value committed on all 2016 in-window ledger rows.",
+      "unmodified": "File extracted verbatim from the deployment bundle. Not regenerated, not recalibrated, not reformatted."
+    }
+  ],
+  "raw_prefix_untouched": "raw/ was not modified. Audited invariant preserved: 2257 slot prefixes, exactly 139 objects each, 313723 objects total.",
+  "soak_window": {
+    "minimum_completion_utc": "2026-09-06T14:55:00Z",
+    "start_utc": "2026-08-30T14:55:00Z"
+  },
+  "verification_record": {
+    "code_digest_note": "Recomputed over the downloaded bundle and equal to the code_digest committed on every in-window ledger row.",
+    "code_digest_of_bundle": "855fe324b44521aef5d6b1dc90c5be4bf115c9c242d92dbddcd5bdae44571dc9",
+    "protocol_sha256_match": true,
+    "thresholds_digest_match": true
+  },
+  "write_classification": "Deliberate write to a frozen surface. Owner-authorised exception to the Phase 1B soak freeze; not a read-only step."
+}
