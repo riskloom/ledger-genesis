@@ -107,7 +107,8 @@ done < SHA256SUMS
 echo "checked $(( $(wc -l < SHA256SUMS) + 1 )) files, $bad bad"
 
 # (b) SHA256SUMS lists exactly the files present, no more and no fewer
-diff <(find . -type f ! -path './.git/*' ! -name SHA256SUMS | sed 's|^\./||' | LC_ALL=C sort) \
+diff <(find . -type f ! -path './.git/*' ! -name SHA256SUMS \
+            ! -name 'cosign.*' | sed 's|^\./||' | LC_ALL=C sort) \
      <(cut -d' ' -f1 SHA256SUMS | LC_ALL=C sort) && echo "inventory is exact"
 
 # (c) SHA256SUMS is byte-exact under the published construction
@@ -122,6 +123,13 @@ sha256sum SHA256SUMS
 
 The root is the SHA-256 of `SHA256SUMS` itself. There is no Merkle tree and no
 domain separation. The construction is in `CLASS_B_SPECIFICATION.md` §1.
+
+The package is every file in this repository except `.git/`, `SHA256SUMS`
+itself, and the signature material (`cosign.bundle`, `cosign.sig`,
+`cosign.pem`, `cosign.crt`). That follows the specification: the commitment
+manifest is excluded from its own inventory, and anything generated *from* it
+sits outside the root it commits to. So downloading the bundle into your
+checkout, as step 3 does, does not change the root.
 
 ### 3. Check the root against the public transparency log
 
@@ -139,6 +147,26 @@ Both pinned values matter. `--certificate-identity` binds the signature to this
 repository's workflow on `main`; `--certificate-oidc-issuer` binds it to GitHub's
 OIDC provider. Without both pins a valid-looking signature from any Sigstore
 identity would pass.
+
+### If you find more than one log entry
+
+Searching Rekor by this repository's identity returns more than one entry. That
+is expected and is not a discrepancy.
+
+The first anchor, over root
+`c63717c9c15f4a553517ad0465d126f792cae544c8685acb261b2333ec03b43c`
+(Rekor log index 2884572651), was created before a bug was fixed in
+`sha256sums.sh`: it did not exclude the signature bundle from the file
+inventory, so downloading `cosign.bundle` into a checkout — which the
+verification steps above tell you to do — made verification fail. The
+specification places signature material outside the committed root, so the
+script was wrong, not the specification.
+
+That entry is superseded. It cannot be withdrawn: a transparency log is
+append-only, which is the property that makes it worth anchoring to. **Verify
+against the most recent entry**, whose root is what `sha256sum SHA256SUMS`
+prints for the current checkout. The evidence under `package/` is byte-identical
+between the two; only the two shell scripts and this README differ.
 
 Or query the log directly, without cosign:
 

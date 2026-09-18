@@ -45,7 +45,9 @@ fi
 
 say ""
 say "== 2. SHA256SUMS lists exactly the files present, no more and no fewer"
-present=$(find . -type f ! -path './.git/*' ! -name 'SHA256SUMS' | sed 's|^\./||' | LC_ALL=C sort)
+present=$(find . -type f ! -path './.git/*' ! -name 'SHA256SUMS' \
+       ! -name 'cosign.bundle' ! -name 'cosign.sig' \
+       ! -name 'cosign.pem' ! -name 'cosign.crt' | sed 's|^\./||' | LC_ALL=C sort)
 listed=$(cut -d' ' -f1 SHA256SUMS | LC_ALL=C sort)
 if [ "$present" = "$listed" ]; then
   say "   OK  no unlisted file, no listed file absent"

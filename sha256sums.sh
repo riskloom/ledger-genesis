@@ -6,9 +6,13 @@
 #   Sort bytewise ascending by the full line.
 #   Join with LF (0x0A), no trailing LF.
 #
-# The package is every file in this repository except .git/ and SHA256SUMS
-# itself. SHA256SUMS is the commitment manifest and is excluded from its own
-# file inventory.
+# The package is every file in this repository except .git/, SHA256SUMS itself,
+# and the signature material. Per the specification: SHA256SUMS is the
+# commitment manifest and is excluded from its own file inventory, and "any
+# signature, certificate or bundle generated from SHA256SUMS is also outside the
+# committed package root". So cosign.bundle / cosign.sig / cosign.pem /
+# cosign.crt are excluded too, and downloading them into a checkout does not
+# change the root.
 #
 #   ./sha256sums.sh          print the canonical bytes to stdout
 #   ./sha256sums.sh --write  write them to ./SHA256SUMS
@@ -31,6 +35,8 @@ _lines() {
   find . -type f \
        ! -path './.git/*' \
        ! -name 'SHA256SUMS' \
+       ! -name 'cosign.bundle' ! -name 'cosign.sig' \
+       ! -name 'cosign.pem' ! -name 'cosign.crt' \
   | sed 's|^\./||' \
   | while IFS= read -r f; do
       printf '%s %s\n' "$f" "$(_d "$f")"
